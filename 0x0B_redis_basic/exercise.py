@@ -7,9 +7,7 @@ from functools import wraps
 
 class Cache:
     """ create a cache class """
-
-         def __init__(self):
-        """ Constructor Method """
+ def __init__(self):
         self._redis = redis.Redis()
         self._redis.flushdb()
 
