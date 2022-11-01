@@ -8,9 +8,11 @@ from functools import wraps
 class Cache:
     """ create a cache class """
 
-           def __init__(self):
+         def __init__(self):
+        """ Constructor Method """
         self._redis = redis.Redis()
         self._redis.flushdb()
+
 
 
     def store(self, data: Union[str, bytes, int, float]) -> str:
